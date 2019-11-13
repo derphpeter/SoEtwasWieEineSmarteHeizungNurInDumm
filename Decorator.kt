@@ -29,10 +29,10 @@ class SensorLimits(private val sensor : Sensor, private val min : Double, privat
     }
 }
 
-var value : Float = 0f
-
 class IgnoreDuplicates(private val sensor : Sensor) : Sensor
 {
+    private var value : Float = 0f
+
     override fun getTemperature() : Float
     {
         var temp : Float
