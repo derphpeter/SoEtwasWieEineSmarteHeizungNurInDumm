@@ -19,8 +19,10 @@ class ReasonableHeatingStrategy : HeatingStrategy
     {
         var tmp = 0
         for(i in last10measures)
-            if(i < 15)
+            if(i < 19)
                 tmp++
+            else if(i < 15)
+                return true
         return tmp >= 5
     }
 }
